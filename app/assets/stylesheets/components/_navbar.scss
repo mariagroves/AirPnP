@@ -1,12 +1,61 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #F6E7FB;
+  max-height: 58px;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.nav-logo {
+  font-family: Big Shoulders Text;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 38px;
+  color: #CAA3F1;
+
+  &:hover{
+    color: #683E19;
+  }
+  }
+
+.nav-item.dropdown {
+  display: flex;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.dropdown-menu {
+  background: #F6E7FB;
+  border-color: #CAA3F1;
+  a {
+      color: #CAA3F1;
+  }
+}
+
+.dropdown-item {
+  &:hover {
+    color: white;
+    background: #CAA3F1;
+  }
+}
+
+.alert.alert-info.alert-dismissible {
+  color: #CAA3F1;
+  background-color: #F6E7FB;
+  border-color: #CAA3F1;
+}
+
+.alert.alert-warning.alert-dismissible {
+  color: #CAA3F1;
+  background-color: #F6E7FB;
+  border-color: #CAA3F1;
+}
+
+
+.alert-dismissible .close {
+  color: #CAA3F1;
 }
