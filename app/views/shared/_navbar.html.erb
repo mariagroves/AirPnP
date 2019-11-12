@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to root_path, class: "navbar-brand" do %>
     <div class="nav-logo">AIR 💩 PNP</div>
     <% end %>
 
@@ -11,7 +11,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-          <%= link_to "#", class: "nav-link" do %>
+          <%= link_to dashboard_path, class: "nav-link" do %>
             <div class="button-nofill">Dashboard</div>
           <% end %>
         <li class="nav-item dropdown">
