@@ -14,6 +14,7 @@ class ToiletsController < ApplicationController
 
   def create
     @toilet = Toilet.new(toilet_params)
+    @toilet.owner = current_user
     if @toilet.save
       redirect_to toilet_path(@toilet)
     else

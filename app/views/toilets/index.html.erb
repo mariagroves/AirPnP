@@ -1,1 +1,16 @@
 <h1>This is the show page for toilets</h1>
+
+<div class="container">
+  <div class="row">
+    <% @toilets.each do |toilet| %>
+    <div class="col-md-4">
+        <div class="card-toilet">
+          <div style="height:200px; background-image: url('<%= cl_image_path toilet.photo, height: 300, width: 400, crop: :fill %>');"></div>
+          <%= toilet.title %>
+          <%= toilet.location %>
+          <%= toilet.price %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
