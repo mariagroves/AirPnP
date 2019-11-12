@@ -34,15 +34,17 @@ url1 = "https://d3knx7v8i1y46b.cloudfront.net/2017/12/arancs-wc1.jpg"
 url2 = "https://cdn.historydaily.org/content/53504/99ab436bc5d2af1be4fadbd7a69c6bfb.jpg"
 
 toilet1 = Toilet.new(
-  title: "Beautiful Toilet",
+  title: "Wonderful Toilet with view on Nyhavn",
   description: "Nice view, warm seat",
   location: "CPH"
+  price: "29"
 )
 
 toilet2 = Toilet.new(
-  title: "Stunning Toilet",
+  title: "Stunning Toilet with a perfect lion shaped statue grip",
   description: "Fancy",
   location: "Louvre"
+  price: "10"
 )
 
 toilet1.remote_photo_url = url1
