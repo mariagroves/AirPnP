@@ -30,11 +30,16 @@ puts "Finished creating user"
 
 puts "Creating toilet"
 
+url = "https://d3knx7v8i1y46b.cloudfront.net/2017/12/arancs-wc1.jpg"
+
 toilet1 = Toilet.new(
   title: "Beautiful Toilet",
   description: "Nice view, warm seat",
   location: "CPH"
 )
+
+toilet1.remote_photo_url = url
+
 toilet1.owner = user1
 
 toilet1.save!
