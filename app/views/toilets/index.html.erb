@@ -14,8 +14,13 @@
               <div class="card-title"><%= toilet.title %></div>
               <div class="card-location"><%= toilet.location %></div>
             </div>
-            <div  class= "card-image" style=" background-image: url('<%= cl_image_path toilet.photo %>');"></div>
+            <% if toilet.images.empty? %>
+                <div  class= "card-image" style=" background-image: url('https://i.pinimg.com/originals/72/a9/3f/72a93f8f5eb98d80df21d63924771142.jpg');"></div>
+              <% else %>
+                <div  class= "card-image" style=" background-image: url('<%= cl_image_path toilet.images.first.url %>');"></div>
+              <% end %>
             <div class="card-price"><%= toilet.price %> DKK.-</div>
+
           </div>
       <% end %>
         </div>
