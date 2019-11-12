@@ -14,8 +14,10 @@ class ToiletsController < ApplicationController
 
   def create
     @toilet = Toilet.new(toilet_params)
-    @toilet.save
-    redirect_to toilet_path(@toilet)
+    if @toilet.save
+      redirect_to toilet_path(@toilet)
+    else
+      render :new
   end
 
   def edit
@@ -36,6 +38,6 @@ class ToiletsController < ApplicationController
   end
 
   def toilet_params
-    params.require(:toilet).permit(:title, :description, :location)
+    params.require(:toilet).permit(:title, :description, :location, :photo)
   end
 end

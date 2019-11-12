@@ -1,0 +1,29 @@
+.button-fill {
+  font-family: 'Space Mono', monospace;
+  display:flex;
+  align-items: center;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 6px 12px;
+  background: #CAA3F1;
+  border-radius: 50px;
+}
+
+.button-nofill {
+  font-family: 'Space Mono', monospace;
+  display:flex;
+  align-items: center;
+  height: 40px;
+  color: #CAA3F1;
+  font-size: 16px;
+  padding: 6px 12px;
+  border: 1px solid #CAA3F1;
+  box-sizing: border-box;
+  border-radius: 50px;
+
+  &:hover {
+    background: #CAA3F1;
+    color: white;
+  }
+}
