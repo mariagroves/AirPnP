@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
   def new
+    # @toilet = Tilet.find(params[:toilet_id])
     @booking = Booking.new
   end
 
