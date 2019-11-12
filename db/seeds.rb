@@ -5,3 +5,50 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# User.destroy_all
+# Toilet.destroy_all
+# Booking.destroy_all
+
+puts "Creating users"
+
+user1 = User.new(
+  email: "user1@lewagon.com",
+  password: "123456"
+)
+
+user1.save!
+
+user2 = User.new(
+  email: "user2@lewagon.com",
+  password: "123456"
+)
+
+user2.save!
+
+puts "Finished creating user"
+
+puts "Creating toilet"
+
+toilet1 = Toilet.new(
+  title: "Beautiful Toilet",
+  description: "Nice view, warm seat",
+  location: "CPH"
+)
+toilet1.owner = user1
+
+toilet1.save!
+puts "Finished creating toilet"
+
+puts "Creating booking"
+
+booking1 = Booking.new(
+  date: Date.today,
+  time: Time.now
+)
+ booking1.toilet = toilet1
+ booking1.renter = user2
+
+booking1.save!
+puts "Finished creating booking"
+

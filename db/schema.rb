@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 2019_11_11_175542) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.date "date"
-    t.time "time"
     t.bigint "renter_id"
     t.bigint "toilet_id"
+    t.date "date"
+    t.time "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["renter_id"], name: "index_bookings_on_renter_id"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 2019_11_11_175542) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "owner_id"
+    t.index ["owner_id"], name: "index_toilets_on_owner_id"
     t.string "photo"
   end
 
@@ -49,4 +51,5 @@ ActiveRecord::Schema.define(version: 2019_11_11_175542) do
 
   add_foreign_key "bookings", "toilets"
   add_foreign_key "bookings", "users", column: "renter_id"
+  add_foreign_key "toilets", "users", column: "owner_id"
 end
