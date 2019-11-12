@@ -36,15 +36,15 @@ url2 = "https://cdn.historydaily.org/content/53504/99ab436bc5d2af1be4fadbd7a69c6
 toilet1 = Toilet.new(
   title: "Wonderful Toilet with view on Nyhavn",
   description: "Nice view, warm seat",
-  location: "CPH"
-  price: "29"
+  location: "CPH",
+  price: 29
 )
 
 toilet2 = Toilet.new(
   title: "Stunning Toilet with a perfect lion shaped statue grip",
   description: "Fancy",
-  location: "Louvre"
-  price: "10"
+  location: "Louvre",
+  price: 10
 )
 
 toilet1.remote_photo_url = url1
