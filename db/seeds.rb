@@ -30,8 +30,6 @@ puts "Finished creating user"
 
 puts "Creating toilet"
 
-url1 = "https://d3knx7v8i1y46b.cloudfront.net/2017/12/arancs-wc1.jpg"
-url2 = "https://cdn.historydaily.org/content/53504/99ab436bc5d2af1be4fadbd7a69c6bfb.jpg"
 
 toilet1 = Toilet.new(
   title: "Wonderful Toilet with view on Nyhavn",
@@ -47,8 +45,6 @@ toilet2 = Toilet.new(
   price: 10
 )
 
-toilet1.remote_photo_url = url1
-toilet2.remote_photo_url = url2
 
 toilet1.owner = user1
 toilet2.owner = user2

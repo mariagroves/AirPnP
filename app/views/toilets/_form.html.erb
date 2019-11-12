@@ -14,8 +14,7 @@
         <%= f.input :title %>
         <%= f.input :description %>
         <%= f.input :location %>
-        <%= f.input :photo %>
-        <%= f.input :photo_cache, as: :hidden %>
+        <%= f.file_field :images, multiple: true%>
         <%= f.submit "Add!" %>
       <% end %>
     </div>
