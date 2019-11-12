@@ -6,9 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Booking.destroy_all
+Image.destroy_all
+Toilet.destroy_all
+User.destroy_all
 # User.destroy_all
 # Toilet.destroy_all
 # Booking.destroy_all
+# Image.destroy_all
 
 puts "Creating users"
 
@@ -65,4 +70,30 @@ booking1 = Booking.new(
 
 booking1.save!
 puts "Finished creating booking"
+
+puts "Creating images"
+
+url1 = "https://i.pinimg.com/originals/72/a9/3f/72a93f8f5eb98d80df21d63924771142.jpg"
+url2 = "http://www.vyperlook.com/wp-content/uploads/massupload/930439Cool-Toilets-11.jpg"
+image1 = Image.new
+image2 = Image.new
+image1.remote_url_url = url1
+image2.remote_url_url = url2
+image1.toilet = toilet1
+image2.toilet = toilet1
+image1.save!
+image2.save!
+
+url4 = "https://i.pinimg.com/originals/72/a9/3f/72a93f8f5eb98d80df21d63924771142.jpg"
+url3 = "http://www.vyperlook.com/wp-content/uploads/massupload/930439Cool-Toilets-11.jpg"
+image3 = Image.new
+image4 = Image.new
+image3.remote_url_url = url3
+image4.remote_url_url = url4
+image3.toilet = toilet2
+image4.toilet = toilet2
+image3.save!
+image4.save!
+
+puts "Finished creating images"
 
