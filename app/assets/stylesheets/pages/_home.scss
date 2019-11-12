@@ -1,1 +1,19 @@
-// Specific CSS for your home-page
+ body {
+  background-color: #CAA3F1;
+ }
+
+.landing-text {
+  font-family: Big Shoulders Text;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 10vw;
+  line-height: 12vw;
+  text-align: center;
+  color: #F6E7FB;
+
+  margin-top: 30px;
+}
+
+.typed-cursor {
+  display: none;
+}
