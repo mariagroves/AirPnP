@@ -17,6 +17,9 @@ class ToiletsController < ApplicationController
   def create
     @toilet = Toilet.new(toilet_params)
     @toilet.owner = current_user
+    params[:toilet][:images].each do |image_attributes|
+      Image.create(url: image_attributes, toilet: @toilet)
+    end
     if @toilet.save
       redirect_to toilet_path(@toilet)
     else

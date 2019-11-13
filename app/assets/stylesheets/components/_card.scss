@@ -1,0 +1,67 @@
+.card-toilet {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  background-color: #F6E7FB;
+  position:relative;
+
+  &:hover {
+      -webkit-animation: shadow-pop-bl 0.15s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+          animation: shadow-pop-bl 0.15s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+
+  }
+
+}
+
+.card-link:hover {
+  text-decoration: none;
+}
+
+.card-info {
+  width: 40%;
+  padding: 6px 12px;
+  display:flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-family: Big Shoulders Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 36px;
+  color: #CAA3F1;
+
+
+  flex-grow:1;
+}
+
+.card-price {
+  font-family: Big Shoulders Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #CAA3F1 ;
+  padding:0px 8px;
+  background-color: #F6E7FB;
+  border: .5px solid #CAA3F1;
+}
+
+.card-location {
+  color: #CAA3F1;
+    a {
+  text-decoration: none;
+  }
+}
+
+.card-image {
+  background-color: red;
+  flex-grow:1;
+  height:100%;
+  background-position: center;
+  background-size: cover;
+}

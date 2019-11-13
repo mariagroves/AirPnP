@@ -1,16 +1,29 @@
-<h1>This is the show page for toilets</h1>
 
 <div class="container">
-  <div class="row">
+  <div class="row d-flex justify-content-center">
+    <div class="page-title">
+      <h1>Browse the seats that'll suit your butt</h1>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
     <% @toilets.each do |toilet| %>
-    <div class="col-md-4">
-        <div class="card-toilet">
-          <div style="height:200px; background-image: url('<%= cl_image_path toilet.photo, height: 300, width: 400, crop: :fill %>');"></div>
-          <%= toilet.title %>
-          <%= toilet.location %>
-          <%= toilet.price %>
+      <div class="col-md-6">
+    <%= link_to toilet_path(toilet), class: "card-link" do  %>
+          <div class="card-toilet">
+            <div class="card-info">
+              <div class="card-title"><%= toilet.title %></div>
+              <div class="card-location"><%= toilet.location %></div>
+            </div>
+            <% if toilet.images.empty? %>
+                <div  class= "card-image" style=" background-image: url('https://i.pinimg.com/originals/72/a9/3f/72a93f8f5eb98d80df21d63924771142.jpg');"></div>
+              <% else %>
+                <div  class= "card-image" style=" background-image: url('<%= cl_image_path toilet.images.first.url %>');"></div>
+              <% end %>
+            <div class="card-price"><%= toilet.price %> DKK.-</div>
+
+          </div>
+      <% end %>
         </div>
-      </div>
     <% end %>
   </div>
 </div>
