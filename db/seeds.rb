@@ -58,70 +58,80 @@ toilet1 = Toilet.new(
   title: "Wonderful Toilet with view on Nyhavn",
   description: "Nice view, warm seat, strong flush, complimentary soap",
   location: "Copenhagen",
-  price: 29
+  price: 29,
+  address: "Ahornsgade 15, 2200 København"
 )
 
 toilet2 = Toilet.new(
   title: "Stunning Toilet with a perfect lion shaped statue grip",
   description: "For people who appreciate art, special experience, centrally located, comes with a butler",
   location: "Louvre",
-  price: 50
+  price: 50,
+  address: "Rue de Rivoli, 75001 Paris, France"
 )
 
 toilet3 = Toilet.new(
   title: "Fun loo for people with a sense of humour",
   description: "no frills, making your toilet experience fun again, lots of reading material",
   location: "London",
-  price: 30
+  price: 30,
+  address: "Silk St, Barbican, London EC2Y 8DS, United Kingdom"
 )
 
 toilet4 = Toilet.new(
   title: "Cosy toilet",
   description: "small space but cosy, cat sometimes wonders in and watches you pee",
   location: "Odense",
-  price: 20
+  price: 20,
+  address: "Hans Jensens Stræde 45, 5000 Odense"
 )
 
 toilet5 = Toilet.new(
   title: "Luxurious pooping spot",
   description: "Super comfy seat, light airy room, good view",
   location: "Barcelona",
-  price: 15
+  price: 15,
+  address: "Carrer de la Reina Cristina, 7, 08003 Barcelona, Spain"
 )
 
 toilet6 = Toilet.new(
   title: "No frills toilet",
   description: "gets the job done, centrally located, near the metro",
   location: "Moscow",
-  price: 10
+  price: 10,
+  address: "Theatre Square, 1, Moscow, Russia, 125009"
 )
 
 toilet7 = Toilet.new(
   title: "Scandi minimalist toilet",
   description: "on trend, see cool Scandi design as you do your business, well-located, plenty of toilet paper",
-  location: "Louvre",
-  price: 50
+  location: "Copenhagen",
+  price: 50,
+  address: "Tranegardsvej 64, Hellerup 2900"
 )
 
 toilet8 = Toilet.new(
   title: "Super cool toilet!! Glows in the dark!",
   description: "amazing space, so comfy, lots of room, option to take a shower",
   location: "Oslo",
-  price: 70
+  price: 70,
+  address: "Johanne Dybwads plass 1, 0161 Oslo, Norway"
 )
 
 toilet9 = Toilet.new(
   title: "Good toilet for anyone in need..",
   description: "very close to metro stops, available most of the time, lots of privacy, soundproof",
   location: "Paris",
-  price: 33
+  price: 33,
+  address: "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France"
 )
 
 toilet10 = Toilet.new(
   title: "Treetop cabin toilet with view on the Amazon jungle",
   description: "connect yourself with nature, bring your animal instincs back to life with our eco friendly relief station, feel like a monkey, shit on the tourists",
   location: "Manaus",
-  price: 10
+  price: 10,
+  address: "Largo de São Sebastião - Centro, Manaus - AM, 69067-080, Brazil"
 )
 
 toilet1.owner = user1
