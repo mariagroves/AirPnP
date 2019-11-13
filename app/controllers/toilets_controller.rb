@@ -8,6 +8,7 @@ class ToiletsController < ApplicationController
 
   def show
     @booking = Booking.new
+    raise
   end
 
   def new
