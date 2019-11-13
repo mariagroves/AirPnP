@@ -35,7 +35,11 @@ class ToiletsController < ApplicationController
   end
 
   def destroy
+    # @toilet.bookings.each do |booking|
+    #   booking.destroy
+    # end
     @toilet.destroy
+    redirect_to dashboard_path
   end
 
   private
