@@ -65,3 +65,20 @@
 .button-link:hover {
   text-decoration: none;
 }
+
+.simple_form input {
+  font-family: 'Space Mono', monospace;
+  display:flex;
+  align-items: center;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  padding: 6px 12px;
+  background: #CAA3F1;
+  border-radius: 50px;
+    &:hover {
+    background: #F6E7FB;
+    color: #CAA3F1;
+    cursor: pointer;
+  }
+}

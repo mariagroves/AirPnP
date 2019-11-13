@@ -1,0 +1,60 @@
+.card-map {
+  display: flex;
+  width: 300px;
+  height: 150px;
+  background-color: #F6E7FB;
+  position:relative;
+}
+
+.card-map-link:hover {
+  text-decoration: none;
+}
+
+.card-map-info {
+  width: 40%;
+  padding: 6px 12px;
+  display:flex;
+  flex-direction: column;
+}
+
+.card-map-title {
+  font-family: Big Shoulders Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 24px;
+  color: #CAA3F1;
+
+
+  flex-grow:1;
+}
+
+.card-map-price {
+  font-family: Big Shoulders Text;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #CAA3F1 ;
+  padding:0px 8px;
+  background-color: #F6E7FB;
+  border: .5px solid #CAA3F1;
+}
+
+.card-map-location {
+  color: #CAA3F1;
+    a {
+  text-decoration: none;
+  }
+}
+
+.card-map-image {
+  background-color: red;
+  flex-grow:1;
+  height:100%;
+  background-position: center;
+  background-size: cover;
+}
