@@ -5,5 +5,8 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @toilets = Toilet.all
+    @bookings = Booking.all
   end
 end
+
