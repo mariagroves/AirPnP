@@ -40,6 +40,7 @@ toilet1 = Toilet.new(
   title: "Wonderful Toilet with view on Nyhavn",
   description: "Nice view, warm seat",
   location: "CPH",
+  address: "Ahornsgade 15",
   price: 29
 )
 
@@ -47,6 +48,7 @@ toilet2 = Toilet.new(
   title: "Stunning Toilet with a perfect lion shaped statue grip",
   description: "Fancy",
   location: "Louvre",
+  address: "Rue de Rivoli",
   price: 10
 )
 
