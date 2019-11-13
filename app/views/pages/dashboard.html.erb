@@ -39,8 +39,13 @@
                     <% end %>
                   <div class="card-price"><%= booking.toilet.price %> DKK.-</div>
                 </div>
+
                 <div class="card-cta">
-                  <div class="button-fill card-button">Cancel Booking</div>
+                  <%= link_to toilet_booking_path(booking, booking.toilet),
+                     method: :delete,
+                     data: { confirm: "Are you sure?" } do %>
+                    <div class="button-fill card-button">Cancel Booking</div>
+                  <% end %>
                 </div>
               </div>
             <% end %>
