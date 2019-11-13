@@ -72,6 +72,25 @@
   background-size: cover;
 }
 
+.show-card {
+  background-color: #F6E7FB;
+  color: #CAA3F1;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  ul {
+    padding-inline-start: 4px;
+  }
+}
+
+.booking-card {
+  background-color: #F6E7FB;
+  color: #CAA3F1;
+  width: 100%;
+  padding: 10px;
+  height: 250px;
+}
+
 .card-cta {
   width: 100%;
   background-color: #F6E7FB;
@@ -83,4 +102,5 @@
 .card-button {
   display: inline-block;
 }
+
 
