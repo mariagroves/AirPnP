@@ -1,1 +1,96 @@
-<h1>This is the dashboard view</h1>
+<div class="container">
+
+  <div class="row d-flex justify-content-center">
+      <div class="page-title welcome">
+        <h1>Welcome, dear <%= current_user.email %> <br> </h1>
+      </div>
+  </div>
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-6">
+      <div class="page-title">
+        <h1>Booked Toilets</h1>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="page-title">
+        <h1>My Toilets</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-6">
+      <% @bookings.each do |booking| %>
+
+        <% if booking.renter == current_user %>
+          <div >
+            <%= link_to toilet_path(booking.toilet), class: "card-link" do  %>
+              <div class="card-dashboard">
+                <div class="card-toilet">
+                  <div class="card-info">
+                    <div class="card-title"><%= booking.toilet.title %></div>
+                    <div class="card-location"><%= booking.toilet.location %></div>
+                  </div>
+                  <% if booking.toilet.images.empty? %>
+                      <div  class= "card-image" style=" background-image: url('https://i.pinimg.com/originals/72/a9/3f/72a93f8f5eb98d80df21d63924771142.jpg');"></div>
+                    <% else %>
+                      <div  class= "card-image" style=" background-image: url('<%= cl_image_path booking.toilet.images.first.url %>');"></div>
+                    <% end %>
+                  <div class="card-price"><%= booking.toilet.price %> DKK.-</div>
+                </div>
+                <div class="card-cta">
+                  <div class="button-fill card-button">Cancel Booking</div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+
+      <% end %>
+    </div>
+
+    <div class="col-6">
+      <% @toilets.each do |toilet| %>
+        <% if toilet.owner == current_user %>
+
+          <div>
+            <%= link_to toilet_path(toilet), class: "card-link" do  %>
+              <div class="card-dashboard">
+
+                <div class="card-toilet">
+                  <div class="card-info">
+                    <div class="card-title"><%= toilet.title %></div>
+                    <div class="card-location"><%= toilet.location %></div>
+                  </div>
+                  <% if toilet.images.empty? %>
+                      <div  class= "card-image" style=" background-image: url('https://i.pinimg.com/originals/72/a9/3f/72a93f8f5eb98d80df21d63924771142.jpg');"></div>
+                    <% else %>
+                      <div  class= "card-image" style=" background-image: url('<%= cl_image_path toilet.images.first.url %>');"></div>
+                    <% end %>
+                  <div class="card-price"><%= toilet.price %> DKK.-</div>
+                </div>
+                <div class="card-cta">
+
+                  <%= link_to edit_toilet_path(toilet) do %>
+                    <div class="button-fill card-button">Edit Toilet</div>
+                  <% end %>
+
+                  <%= link_to toilet_path(toilet),
+                     method: :delete,
+                     data: { confirm: "Are you sure?" } do %>
+                    <div class="button-fill card-button">Flush Toilet</div>
+                  <% end %>
+              </div>
+                </div>
+
+              </div>
+            <% end %>
+          </div>
+
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
