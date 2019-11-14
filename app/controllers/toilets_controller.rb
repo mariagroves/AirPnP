@@ -16,6 +16,13 @@ class ToiletsController < ApplicationController
 
   def show
     @booking = Booking.new
+    # @toilet = Toilet.geocoded
+    @marker =
+      [{
+        lat: @toilet.latitude,
+        lng: @toilet.longitude
+        # infoWindow: render_to_string(partial: "info_window", locals: { toilet: @toilet })
+      }]
   end
 
   def new

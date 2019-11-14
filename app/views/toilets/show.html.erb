@@ -57,13 +57,23 @@
     </div>
 
     <div class="col-sm-4 booking-card">
-      <%= simple_form_for [@toilet, @booking] do |f| %>
-        <%= f.input :date %>
-        <%= f.input :time %>
-        <%= f.submit "Book!" %>
-      <% end %>
+        <%= simple_form_for [@toilet, @booking] do |f| %>
+          <%= f.input :date, as: :date_time_picker %>
+          <%= f.input :time %>
+          <%= f.submit "Book!" %>
+        <% end %>
     </div>
+    <br>
+    <div
+      id="showmapbox"
+      style="width: 100%;
+      height: 200px;"
+      data-markers="<%= @marker.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
   </div>
 </div>
+
+
 
 
