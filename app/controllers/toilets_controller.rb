@@ -16,6 +16,7 @@ class ToiletsController < ApplicationController
 
   def show
     @booking = Booking.new
+    @review = Review.new
     # @toilet = Toilet.geocoded
     @marker =
       [{
