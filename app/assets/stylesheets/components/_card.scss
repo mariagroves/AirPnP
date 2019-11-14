@@ -1,5 +1,5 @@
 .card-dashboard {
-    margin-bottom: 20px;
+    border-radius: 5px;
     &:hover {
       -webkit-animation: shadow-pop-bl 0.15s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
           animation: shadow-pop-bl 0.15s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
@@ -14,14 +14,29 @@
           animation: shadow-pop-bl 0.15s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
   }
   margin-bottom: 20px;
+  border-radius: 5px;
+
 }
 
 .card-toilet {
   display: flex;
   width: 100%;
   height: 250px;
+  border-radius: 5px 5px 0 0 ;
   background-color: $lavender-light;
   position:relative;
+}
+
+.radius-left {
+  border-radius: 5px 0 0 5px;
+}
+
+.radius-right {
+  border-radius: 0 5px 5px 0;
+}
+
+.radius-all {
+  border-radius: 5px;
 }
 
 .card-link:hover {
@@ -72,12 +87,14 @@
   height:100%;
   background-position: center;
   background-size: cover;
+  border-top-right-radius: 5px;
 }
 
 .show-card {
   background-color: $lavender-light;
   color: $lavender-dark;
   width: 100%;
+  border-radius: 5px;
   margin-top: 20px;
   padding: 10px;
   ul {
@@ -89,8 +106,11 @@
   background-color: $lavender-light;
   color: $lavender-dark;
   width: 100%;
-  padding: 10px;
-  height: 250px;
+  padding: 15px;
+  height: 260px;
+  position: sticky;
+  top: 79px;
+  border-radius: 5px;
 }
 
 .card-cta {
@@ -99,6 +119,7 @@
   border-top: 1px solid $lavender-medium;
   padding: 10px 8px;
   display: flex;
+  border-radius: 0 0 5px 5px;
 
 }
 
