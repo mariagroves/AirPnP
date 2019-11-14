@@ -11,7 +11,7 @@
 }
 
 .card-map-info {
-  width: 40%;
+  width: 45%;
   padding: 6px 12px;
   display:flex;
   flex-direction: column;
@@ -33,12 +33,12 @@
   font-family: Big Shoulders Text;
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 14px;
 
   position: absolute;
   bottom: 10px;
   right: 10px;
-  color: $lavender-medium ;
+  color: $lavender-dark ;
   padding:0px 8px;
   background-color: $lavender-light;
   border: .5px solid $lavender-medium;
