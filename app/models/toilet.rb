@@ -1,6 +1,6 @@
 class Toilet < ApplicationRecord
-  geocoded_by :location
-  after_validation :geocode, if: :will_save_change_to_location?
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
   belongs_to :owner, class_name: 'User'
   has_many :bookings, dependent: :destroy
   has_many :renters, through: :bookings, class_name: 'User'
