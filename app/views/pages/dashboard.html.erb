@@ -2,7 +2,7 @@
 
   <div class="row d-flex justify-content-center">
       <div class="page-title welcome">
-        <h1>Welcome, dear <%= current_user.email %> <br> </h1>
+        <h1>Welcome, dear <%= current_user.first_name %> <br> </h1>
       </div>
   </div>
 
@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="card-cta">
-                  <%= link_to toilet_booking_path(booking, booking.toilet),
+                  <%= link_to toilet_booking_path(booking.toilet, booking),
                      method: :delete,
                      data: { confirm: "Are you sure?" } do %>
                     <div class="button-fill card-button">Cancel Booking</div>
