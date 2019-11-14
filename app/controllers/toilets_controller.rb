@@ -40,12 +40,10 @@ class ToiletsController < ApplicationController
 
   def update
     @toilet.update(toilet_params)
+    redirect_to toilet_path(@toilet)
   end
 
   def destroy
-    # @toilet.bookings.each do |booking|
-    #   booking.destroy
-    # end
     @toilet.destroy
     redirect_to dashboard_path
   end
