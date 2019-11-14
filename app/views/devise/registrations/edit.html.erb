@@ -1,8 +1,11 @@
 <div class="container">
+    <div class="row d-flex justify-content-center">
+    <div class="show-title">
+      <h1> Edit <%= resource_name.to_s.humanize %>  </h1>
+    </div>
+  </div>
   <div class="row">
     <div class="col-sm-4 offset-sm-4">
-
-      <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
@@ -32,12 +35,13 @@
         </div>
       <% end %>
 
-      <h3>Cancel my account</h3>
-
-      <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-      <%= link_to "Back", :back %>
-
     </div>
+
   </div>
+      <div class="row d-flex flex-direction-column">
+        <div class="col-sm-4 offset-sm-4">
+          <div> <%= link_to "Cancel my account", registration_path(resource_name), class: "button-nofill", style: 'display:inline-block; text-decoration: none; margin-top:10px;', data: { confirm: "Are you sure?" }, method: :delete %></div>
+          <div> <%= link_to "Back", :back, class: "button-nofill", style: 'display:inline-block; text-decoration: none; margin-top:10px;' %></div>
+          </div>
+        </div>
 </div>
