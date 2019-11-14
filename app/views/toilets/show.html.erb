@@ -65,7 +65,7 @@
                   <div class="txt">
                     <p class="name"> <%= review.user.first_name %> <%= review.user.last_name %></p>
                     <p class="message"> <%= review.content %></p>
-                    <span class="timestamp">10:20 pm</span>
+                    <span class="timestamp"> <%= review.created_at.strftime("%m-%e-%y %H:%M") %> </span>
                   </div>
                 <div class="bubble-arrow"></div>
                  <% if review.user == current_user %>
@@ -90,29 +90,29 @@
 
     </div>
 
-    <div class="col-sm-4 booking-card">
-        <%= simple_form_for [@toilet, @booking] do |f| %>
-          <%= f.input :date, as: :date_time_picker, input_html:
+    <div class="sidebar col-sm-4">
+      <div class="booking-card">
+          <%= simple_form_for [@toilet, @booking] do |f| %>
+            <%= f.input :date, as: :date_time_picker, input_html:
+              { data:
+                {
+                  date_format: "YYYY-MM-DD",
+                }
+              }  %>
+            <%= f.input :time, as: :date_time_picker, input_html:
             { data:
-              {
-                date_format: "YYYY-MM-DD",
-              }
-            }  %>
-          <%= f.input :time, as: :date_time_picker, input_html:
-          { data:
-              {
+                {
 
-                date_format: 'HH:mm:ss',
-                pickDate:false,
-                date_side_by_side: true,
-                date_min_date: Time.current.strftime('%Y-%m-%d')
-              }
-            } %>
-          <%= f.submit "Book!" %>
-        <% end %>
-    </div>
-    <br>
-    <div class="col-sm-8 mb-4">
+                  date_format: 'HH:mm:ss',
+                  pickDate:false,
+                  date_side_by_side: true,
+                  date_min_date: Time.current.strftime('%Y-%m-%d')
+                }
+              } %>
+            <%= f.submit "Book!" %>
+          <% end %>
+      </div>
+
       <div
         id="showmapbox"
         style="width: 100%;
@@ -121,6 +121,10 @@
         data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
       ></div>
     </div>
+<!--     <br>
+    <div class="col-sm-8 mb-4">
+
+    </div> -->
   </div>
 </div>
 
