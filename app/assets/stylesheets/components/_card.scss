@@ -1,16 +1,27 @@
+.card-dashboard {
+    margin-bottom: 20px;
+    &:hover {
+      -webkit-animation: shadow-pop-bl 0.15s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+          animation: shadow-pop-bl 0.15s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+
+  }
+    margin-bottom: 20px;
+}
+
+.card-index {
+  &:hover {
+      -webkit-animation: shadow-pop-bl 0.15s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+          animation: shadow-pop-bl 0.15s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+  }
+  margin-bottom: 20px;
+}
+
 .card-toilet {
   display: flex;
   width: 100%;
   height: 250px;
   background-color: #F6E7FB;
   position:relative;
-
-  &:hover {
-      -webkit-animation: shadow-pop-bl 0.15s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-          animation: shadow-pop-bl 0.15s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-
-  }
-
 }
 
 .card-link:hover {
@@ -31,8 +42,6 @@
   font-size: 32px;
   line-height: 36px;
   color: #CAA3F1;
-
-
   flex-grow:1;
 }
 
@@ -59,9 +68,41 @@
 }
 
 .card-image {
-  background-color: red;
   flex-grow:1;
   height:100%;
   background-position: center;
   background-size: cover;
 }
+
+.show-card {
+  background-color: #F6E7FB;
+  color: #CAA3F1;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  ul {
+    padding-inline-start: 4px;
+  }
+}
+
+.booking-card {
+  background-color: #F6E7FB;
+  color: #CAA3F1;
+  width: 100%;
+  padding: 10px;
+  height: 250px;
+}
+
+.card-cta {
+  width: 100%;
+  background-color: #F6E7FB;
+  border-top: 1px solid #CAA3F1;
+  padding: 10px 8px;
+
+}
+
+.card-button {
+  display: inline-block;
+}
+
+
