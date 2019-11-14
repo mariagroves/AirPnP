@@ -75,7 +75,7 @@ toilet3 = Toilet.new(
   description: "no frills, making your toilet experience fun again, lots of reading material",
   location: "London",
   price: 30,
-  address: "Silk St, Barbican, London EC2Y 8DS, United Kingdom"
+  address: "London EC2Y 8AY United Kingdom"
 )
 
 toilet4 = Toilet.new(
@@ -99,7 +99,7 @@ toilet6 = Toilet.new(
   description: "gets the job done, centrally located, near the metro",
   location: "Moscow",
   price: 10,
-  address: "Theatre Square, 1, Moscow, Russia, 125009"
+  address: "Moscow, Russia, 125009"
 )
 
 toilet7 = Toilet.new(
@@ -123,7 +123,7 @@ toilet9 = Toilet.new(
   description: "very close to metro stops, available most of the time, lots of privacy, soundproof",
   location: "Paris",
   price: 33,
-  address: "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France"
+  address: "5 Avenue Anatole France, 75007 Paris, France"
 )
 
 toilet10 = Toilet.new(
@@ -131,7 +131,7 @@ toilet10 = Toilet.new(
   description: "connect yourself with nature, bring your animal instincs back to life with our eco friendly relief station, feel like a monkey, shit on the tourists",
   location: "Manaus",
   price: 10,
-  address: "Largo de São Sebastião - Centro, Manaus - AM, 69067-080, Brazil"
+  address: "Rio de Janeiro, 22431-040, Brazil"
 )
 
 toilet1.owner = user1
