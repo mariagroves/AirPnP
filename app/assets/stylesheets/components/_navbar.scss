@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #F6E7FB;
+  background: $lavender-light;
   max-height: 58px;
 }
 
@@ -13,7 +13,7 @@
   font-style: normal;
   font-weight: 900;
   font-size: 38px;
-  color: #CAA3F1;
+  color: $lavender-dark;
 
   &:hover{
     color: #683E19;
@@ -29,33 +29,33 @@
 }
 
 .dropdown-menu {
-  background: #F6E7FB;
-  border-color: #CAA3F1;
+  background: $lavender-light;
+  border-color: $lavender-medium;
   a {
-      color: #CAA3F1;
+      color: $lavender-dark;
   }
 }
 
 .dropdown-item {
   &:hover {
     color: white;
-    background: #CAA3F1;
+    background: $lavender-dark;
   }
 }
 
 .alert.alert-info.alert-dismissible {
-  color: #CAA3F1;
-  background-color: #F6E7FB;
-  border-color: #CAA3F1;
+  color: $lavender-medium;
+  background-color: $lavender-light;
+  border-color: $lavender-medium;
 }
 
 .alert.alert-warning.alert-dismissible {
-  color: #CAA3F1;
-  background-color: #F6E7FB;
-  border-color: #CAA3F1;
+  color: $lavender-medium;
+  background-color: $lavender-light;
+  border-color: $lavender-medium;
 }
 
 
 .alert-dismissible .close {
-  color: #CAA3F1;
+  color: $lavender-medium;
 }

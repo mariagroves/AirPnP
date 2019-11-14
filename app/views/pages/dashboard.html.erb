@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="card-cta">
-                  <%= link_to toilet_booking_path(booking, booking.toilet),
+                  <%= link_to toilet_booking_path(booking.toilet, booking),
                      method: :delete,
                      data: { confirm: "Are you sure?" } do %>
                     <div class="button-fill card-button">Cancel Booking</div>
@@ -80,7 +80,6 @@
                   <%= link_to edit_toilet_path(toilet) do %>
                     <div class="button-fill card-button">Edit Toilet</div>
                   <% end %>
-
                   <%= link_to toilet_path(toilet),
                      method: :delete,
                      data: { confirm: "Are you sure?" } do %>
