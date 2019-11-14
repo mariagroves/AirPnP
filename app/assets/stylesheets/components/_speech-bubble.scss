@@ -4,9 +4,8 @@
     width: 240px;
     height: auto;
     display: block;
-    background: #f5f5f5;
+    background: $lavender-dark;
     border-radius: 4px;
-    // box-shadow: 2px 8px 5px #000;
     position: relative;
     margin: 0 0 25px;
     &.alt{
@@ -18,7 +17,7 @@
         font-weight: 600;
         font-size: 12px;
         margin: 0 0 4px;
-        color: #3498db;
+        color: white;
         span{
           font-weight: normal;
           color: #b3b3b3;
@@ -30,14 +29,14 @@
       .message{
         font-size: 12px;
         margin: 0;
-        color: #2b2b2b;
+        color: white;
       }
       .timestamp{
         font-size: 11px;
         position: absolute;
         bottom: 8px;
         right: 10px;
-        text-transform: uppercase; color: #999
+        text-transform: uppercase; color: #CAA3F1
       }
     }
     .bubble-arrow {
@@ -56,7 +55,7 @@
       content: "";
       position: absolute;
       border: 0 solid transparent;
-      border-top: 9px solid #f5f5f5;
+      border-top: 9px solid $lavender-dark;
       border-radius: 0 20px 0;
       width: 15px;
       height: 30px;
