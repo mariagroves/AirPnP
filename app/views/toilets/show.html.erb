@@ -32,7 +32,7 @@
 
       <div class="show-card d-flex align-items-center justify-content-between">
         <div class="sub-title">
-          <h3>This toilet in <%= @toilet.location %> is hosted by <%= @toilet.owner.first_name%> <%= @toilet.owner.last_name %></h3>
+          <h3>This toilet in <strong> <%= @toilet.location %> </strong> is hosted by <strong> <%= @toilet.owner.first_name%> <%= @toilet.owner.last_name %> </strong> </h3>
         </div>
         <div>
           <img src="https://blog.fromjapan.co.jp/en/wp-content/uploads/2015/08/Poop_2.jpg" alt="" class="avatar-large">
@@ -42,7 +42,7 @@
       <div class="show-card">
         <h3>Details</h3>
         <ul>
-          <i class="fas fa-euro-sign"></i><%= @toilet.price %> per use
+          <strong>DKK</strong> <%= @toilet.price %> per use
           <% @toilet.description.split(',').each do |description| %>
             <li class="d-flex">
               <div>
@@ -52,6 +52,40 @@
             </li>
           <% end %>
         </ul>
+      </div>
+
+      <div class="show-card">
+        <h3>Reviews</h3>
+        <% if @toilet.reviews.empty? %>
+          There are no reviews for this toilet!
+        <% else %>
+            <% @toilet.reviews.each do |review| %>
+              <div class="speech-wrapper d-flex">
+                <div class="bubble">
+                  <div class="txt">
+                    <p class="name"> <%= review.user.first_name %> <%= review.user.last_name %></p>
+                    <p class="message"> <%= review.content %></p>
+                    <span class="timestamp">10:20 pm</span>
+                  </div>
+                <div class="bubble-arrow"></div>
+                 <% if review.user == current_user %>
+                  <%= link_to toilet_review_path(review.toilet, review),
+                      method: :delete,
+                      data: { confirm: "Are you sure?" } do %>
+                    <div class="small-delete-button-fill card-button">Delete</div>
+                  <% end %>
+                <% end %>
+                </div>
+              </div>
+            <% end %>
+        <% end %>
+      </div>
+
+      <div class="show-card">
+        <%= simple_form_for [@toilet, @review] do |f| %>
+          <%= f.input :content, label: "Please leave a review" %>
+          <%= f.submit "Submit" %>
+        <% end %>
       </div>
 
     </div>

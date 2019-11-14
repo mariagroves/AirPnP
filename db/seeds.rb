@@ -11,7 +11,7 @@ Image.destroy_all
 Toilet.destroy_all
 User.destroy_all
 
-puts "Creating users"
+puts "Creating users..."
 
 user1 = User.new(
   email: "user1@lewagon.com",
@@ -43,15 +43,42 @@ user3.save!
 user4 = User.new(
   email: "user4@lewagon.com",
   password: "123456",
-  first_name: "James",
-  last_name: "Bond"
+  first_name: "Bobby",
+  last_name: "Bob Bob"
 )
 
 user4.save!
 
-puts "Finished creating user"
+user5 = User.new(
+  email: "user5@lewagon.com",
+  password: "123456",
+  first_name: "Vladimir",
+  last_name: "Putin"
+)
 
-puts "Creating toilet"
+user5.save!
+
+user6 = User.new(
+  email: "user6@lewagon.com",
+  password: "123456",
+  first_name: "Sebastien",
+  last_name: "Saunier"
+)
+
+user6.save!
+
+user7 = User.new(
+  email: "user7@lewagon.com",
+  password: "123456",
+  first_name: "Boris",
+  last_name: "Paillard"
+)
+
+user7.save!
+
+puts "Finished creating users"
+
+puts "Creating toilets..."
 
 
 toilet1 = Toilet.new(
@@ -319,3 +346,79 @@ image20.save!
 
 puts "Finished creating images"
 
+puts "Creating reviews..."
+
+review1 = Review.new(
+  content: "As described, great experience"
+  )
+
+review2 = Review.new(
+  content: "Very nice toilet, cool vibe"
+  )
+
+review3 = Review.new(
+  content: "Really enjoyed it, and communication with the host was easy"
+  )
+
+review4 = Review.new(
+  content: "Really enjoyed it, and communication with the host was easy"
+  )
+
+review5 = Review.new(
+  content: "Super"
+  )
+
+review6 = Review.new(
+  content: "Was a bit disappointed by the quality of the toilet paper provided"
+  )
+
+review7 = Review.new(
+  content: "It was OK. The door wouldn't close properly"
+  )
+
+review8 = Review.new(
+  content: "It was good but for some reason I was disappointed and left feeling sad"
+  )
+
+review9 = Review.new(
+  content: "OMG AMAZING!!!!"
+  )
+
+review10 = Review.new(
+  content: "I wanted to take my time but the owner tried to kick me out after 10 minutes"
+  )
+
+review1.toilet = toilet1
+review2.toilet = toilet1
+review3.toilet = toilet3
+review4.toilet = toilet3
+review5.toilet = toilet4
+review6.toilet = toilet5
+review7.toilet = toilet7
+review8.toilet = toilet9
+review9.toilet = toilet9
+review10.toilet = toilet10
+
+review1.user = user1
+review2.user = user2
+review3.user = user5
+review4.user = user6
+review5.user = user1
+review6.user = user4
+review7.user = user3
+review8.user = user7
+review9.user = user6
+review10.user = user3
+
+review1.save!
+review2.save!
+review3.save!
+review4.save!
+review5.save!
+review6.save!
+review7.save!
+review8.save!
+review9.save!
+review10.save!
+
+puts "Finished creating reviews"

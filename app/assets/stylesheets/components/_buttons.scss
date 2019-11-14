@@ -15,6 +15,26 @@
   }
 }
 
+.small-delete-button-fill {
+  font-family: 'Space Mono', monospace;
+  display:flex;
+  align-items: center;
+  height: 26px;
+  font-size: 13px;
+  color: white;
+  padding: 4px 12px;
+  background: #CAA3F1;
+  border-radius: 50px;
+  position: absolute;
+  bottom: 42px;
+  left: 192px;
+  &:hover {
+    background: #F6E7FB;
+    color: #CAA3F1;
+    border: 1px solid #CAA3F1;
+  }
+}
+
 .button-nofill {
   font-family: 'Space Mono', monospace;
   display:flex;
