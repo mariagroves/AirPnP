@@ -13,7 +13,7 @@
     data-mapbox-api-key= "<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
   <br>
-  <div class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content">
     <% @toilets.each do |toilet| %>
       <div class="col-md-6">
         <%= link_to toilet_path(toilet), class: "card-link" do  %>

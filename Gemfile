@@ -20,6 +20,10 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'datetime_picker_input'
+gem 'bootstrap-sass'
+gem 'bootstrap-glyphicons'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
