@@ -2,7 +2,7 @@
   display: flex;
   width: 300px;
   height: 150px;
-  background-color: #F6E7FB;
+  background-color: $lavender-light;
   position:relative;
 }
 
@@ -23,7 +23,7 @@
   font-weight: 600;
   font-size: 22px;
   line-height: 24px;
-  color: #CAA3F1;
+  color: $lavender-dark;
 
 
   flex-grow:1;
@@ -38,14 +38,14 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
-  color: #CAA3F1 ;
+  color: $lavender-medium ;
   padding:0px 8px;
-  background-color: #F6E7FB;
-  border: .5px solid #CAA3F1;
+  background-color: $lavender-light;
+  border: .5px solid $lavender-medium;
 }
 
 .card-map-location {
-  color: #CAA3F1;
+  color: $lavender-dark;
     a {
   text-decoration: none;
   }
