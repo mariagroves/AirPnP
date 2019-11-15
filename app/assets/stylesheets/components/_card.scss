@@ -133,11 +133,17 @@
   padding: 10px 8px;
   display: flex;
   border-radius: 0 0 5px 5px;
-
+  position: relative;
+  .booking-details {
+    position:absolute;
+    color: $lavender-dark;
+    font-size: 14px;
+    bottom:10px;
+    right:10px;
+  }
 }
 
 .card-button {
   display: inline-block;
 }
-
 
