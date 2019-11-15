@@ -53,7 +53,7 @@ class ToiletsController < ApplicationController
 
   def destroy
     @toilet.destroy
-    redirect_to dashboard_path
+    # redirect_to dashboard_path
   end
 
   private

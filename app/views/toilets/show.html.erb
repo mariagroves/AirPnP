@@ -37,7 +37,7 @@
       <div class="show-card" id="reviews">
         <h3>Reviews</h3>
         <% if @toilet.reviews.empty? %>
-          There are no reviews for this toilet!
+          <p id="message">There are no reviews for this toilet!</p>
         <% else %>
             <% @toilet.reviews.each do |review| %>
                <%= render 'reviews/show', review: review %>
