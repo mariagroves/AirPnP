@@ -1,0 +1,4 @@
+<%= simple_form_for([toilet, review], remote: true) do |f| %>
+  <%= f.input :content, label: "Please leave a review" %>
+  <%= f.submit "Submit" %>
+<% end %>

@@ -1,0 +1,18 @@
+<div class="speech-wrapper d-flex" id="review-<%=review.id %>">
+  <div class="bubble">
+    <div class="txt">
+      <p class="name"> <%= review.user.first_name %> <%= review.user.last_name %></p>
+      <p class="message"> <%= review.content %></p>
+      <span class="timestamp"> <%= review.created_at.strftime("%m-%e-%y %H:%M") %> </span>
+    </div>
+  <div class="bubble-arrow"></div>
+   <% if review.user == current_user %>
+    <%= link_to toilet_review_path(review.toilet, review),
+        method: :delete,
+        remote: true,
+        data: { confirm: "Are you sure?" } do %>
+      <div class="small-delete-button-fill card-button">Delete</div>
+    <% end %>
+  <% end %>
+  </div>
+</div>
