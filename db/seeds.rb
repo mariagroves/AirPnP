@@ -188,28 +188,28 @@ puts "Finished creating toilet"
 puts "Creating booking"
 
 booking1 = Booking.new(
-  date: Date.today,
-  time: Time.now
+  date: Date.today + 3,
+  time: Time.now - 3600
 )
 
 booking2 = Booking.new(
-  date: Date.today,
-  time: Time.now
+  date: Date.today + 5,
+  time: Time.now + 23124
 )
 
 booking3 = Booking.new(
-  date: Date.today,
-  time: Time.now
+  date: Date.today + 10,
+  time: Time.now - 36000
 )
 
 booking4 = Booking.new(
-  date: Date.today,
-  time: Time.now
+  date: Date.today + 1,
+  time: Time.now - 32000
 )
 
 booking5 = Booking.new(
-  date: Date.today,
-  time: Time.now
+  date: Date.today + 16,
+  time: Time.now + 20000
 )
 
 booking1.toilet = toilet1
@@ -218,11 +218,11 @@ booking3.toilet = toilet4
 booking4.toilet = toilet7
 booking5.toilet = toilet10
 
-booking1.renter = user2
+booking1.renter = user1
 booking2.renter = user1
 booking3.renter = user3
 booking4.renter = user1
-booking5.renter = user2
+booking5.renter = user1
 
 booking1.save!
 booking2.save!

@@ -47,6 +47,7 @@
                      data: { confirm: "Are you sure?" } do %>
                     <div class="button-fill card-button">Cancel Booking</div>
                   <% end %>
+                    <div class="booking-details">Your booking is on <%= booking.date.strftime("%b %d %Y") %> at <%= booking.time.strftime("%H:%M") %> </div>
                 </div>
               </div>
             <% end %>
