@@ -108,14 +108,21 @@
   width: 100%;
   padding: 15px;
   height: 260px;
-  position: sticky;
-  top: 79px;
   border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.side-wrap{
+  position: relative;
+  width:100%;
+}
+
+.sidebar{
+  position: sticky !important;
+  top: 73px;
 }
 
 #showmapbox{
-  position: sticky;
-  top: 500px;
   border-radius: 5px;
 }
 
