@@ -8,9 +8,18 @@ function addReview(reviewHTML) {
   reviews.insertAdjacentHTML('beforeend', reviewHTML);
 }
 
+function removeMessage() {
+  const message = document.getElementById("message").remove();
+}
+
 <% if @review.errors.any? %>
   refreshForm('<%= j render "reviews/form", toilet: @toilet, review: @review %>');
 <% else %>
-  addReview('<%= j render "reviews/show", review: @review %>');
-  refreshForm('<%= j render "reviews/form", toilet: @toilet, review: Review.new %>');
+  <% if @toilet.reviews.length == 1 %>
+    removeMessage();
+  <% end %>
+    addReview('<%= j render "reviews/show", review: @review %>');
+    refreshForm('<%= j render "reviews/form", toilet: @toilet, review: Review.new %>');
+
 <% end %>
+

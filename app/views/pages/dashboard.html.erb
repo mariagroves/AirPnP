@@ -24,7 +24,7 @@
       <% @bookings.each do |booking| %>
 
         <% if booking.renter == current_user %>
-          <div >
+          <div id="booking-<%= booking.id %>">
             <%= link_to toilet_path(booking.toilet), class: "card-link" do  %>
               <div class="card-dashboard">
                 <div class="card-toilet">
@@ -43,6 +43,7 @@
                 <div class="card-cta">
                   <%= link_to toilet_booking_path(booking.toilet, booking),
                      method: :delete,
+                     remote: true,
                      data: { confirm: "Are you sure?" } do %>
                     <div class="button-fill card-button">Cancel Booking</div>
                   <% end %>
@@ -59,7 +60,7 @@
       <% @toilets.each do |toilet| %>
         <% if toilet.owner == current_user %>
 
-          <div>
+          <div id="toilet-<%= toilet.id %>">
             <%= link_to toilet_path(toilet), class: "card-link" do  %>
               <div class="card-dashboard">
 
@@ -82,6 +83,7 @@
                   <% end %>
                   <%= link_to toilet_path(toilet),
                      method: :delete,
+                     remote: true,
                      data: { sound_url: asset_path("flush.mp3") } do %>
                     <div class="button-fill card-button flush" id="flush">Flush Toilet</div>
                   <% end %>

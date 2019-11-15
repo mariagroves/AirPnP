@@ -1,1 +1,5 @@
+const reviewBox = document.getElementById("reviews");
 document.getElementById("review-<%=@review.id %>").remove();
+<% if @toilet.reviews.empty? %>
+  reviewBox.insertAdjacentHTML('beforeend', '<span>There are no reviews for this toilet!</span>');
+<% end %>

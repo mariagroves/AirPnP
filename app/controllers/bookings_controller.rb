@@ -1,6 +1,5 @@
 class BookingsController < ApplicationController
   def new
-    # @toilet = Tilet.find(params[:toilet_id])
     @booking = Booking.new
   end
 
@@ -19,7 +18,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to dashboard_path
+    # redirect_to dashboard_path
   end
 
   private
