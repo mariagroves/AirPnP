@@ -44,7 +44,8 @@
                   <%= link_to toilet_booking_path(booking.toilet, booking),
                      method: :delete,
                      remote: true,
-                     data: { confirm: "Are you sure?" } do %>
+                     class: "flush",
+                     data: { sound_url: asset_path("flush.mp3") } do %>
                     <div class="button-fill card-button">Cancel Booking</div>
                   <% end %>
                 </div>
