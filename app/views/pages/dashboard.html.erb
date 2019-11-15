@@ -82,8 +82,8 @@
                   <% end %>
                   <%= link_to toilet_path(toilet),
                      method: :delete,
-                     data: { confirm: "Are you sure?" } do %>
-                    <div class="button-fill card-button">Flush Toilet</div>
+                     data: { sound_url: asset_path("flush.mp3") } do %>
+                    <div class="button-fill card-button flush" id="flush">Flush Toilet</div>
                   <% end %>
               </div>
                 </div>
@@ -97,4 +97,8 @@
     </div>
   </div>
 </div>
+
+<%= javascript_pack_tag 'flush-sound' %>
+
+
 
