@@ -84,8 +84,9 @@
                   <%= link_to toilet_path(toilet),
                      method: :delete,
                      remote: true,
+                     class: "flush",
                      data: { sound_url: asset_path("flush.mp3") } do %>
-                    <div class="button-fill card-button flush" id="flush">Flush Toilet</div>
+                    <div class="button-fill card-button">Flush Toilet</div>
                   <% end %>
               </div>
                 </div>
