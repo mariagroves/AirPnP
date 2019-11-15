@@ -5,7 +5,7 @@ class Toilet < ApplicationRecord
   has_many :bookings, dependent: :destroy
   has_many :renters, through: :bookings, class_name: 'User'
   has_many :images, dependent: :destroy
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   validates :title, presence: true
   validates :description, presence: true
   validates :location, presence: true
