@@ -1,8 +1,8 @@
 class ReviewsController < ApplicationController
 
-  def new
-    @review = Review.new
-  end
+  # def new
+  #   @review = Review.new
+  # end
 
   def create
     @review = Review.new(review_params)
@@ -10,17 +10,23 @@ class ReviewsController < ApplicationController
     @review.user = current_user
     @review.toilet = @toilet
     if @review.save
-      redirect_to toilet_path(@toilet)
+      respond_to do |format|
+        format.html { redirect_to toilet_path(@toilet) }
+        format.js  # <-- will render `app/views/reviews/create.js.erb`
+      end
     else
-      render :new
+      respond_to do |format|
+        format.html { render 'toilets/show' }
+        format.js  # <-- idem
+      end
     end
   end
 
   def destroy
     @review = Review.find(params[:id])
-    @toilet = Toilet.find(params[:toilet_id])
+    # @toilet = Toilet.find(params[:toilet_id])
     @review.destroy
-    redirect_to toilet_path(@toilet)
+    # redirect_to toilet_path(@toilet)
   end
 
   private
